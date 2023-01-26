@@ -42,7 +42,10 @@ function marcupForCountries(countries) {
   const marcup = countries
     .map(
       ({ name, flags }) =>
-        `<div class="group__list"><img class='img__list' src="${flags.svg}" alt="${name}" width="80" height="50" /> <p class='text__list'>${name.common}</p></div>`
+        `<div class="group__list">
+        <img class='img__list' src="${flags.svg}" alt="${name}" width="80" height="50" /> 
+        <p class='text__list'>${name.common}</p>
+        </div>`
     )
     .join('');
   list.innerHTML = marcup;
